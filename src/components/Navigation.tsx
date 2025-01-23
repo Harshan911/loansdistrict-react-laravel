@@ -28,6 +28,7 @@ export const Navigation = () => {
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-white hover:text-gray-300">Home</Link>
             <Link to="/about" className="text-white hover:text-gray-300">About Us</Link>
+            <Link to="/blogs" className="text-white hover:text-gray-300">Blogs</Link>
             <a href="#services" className="text-white hover:text-gray-300">Services</a>
           </div>
         </div>
@@ -38,6 +39,7 @@ export const Navigation = () => {
             <div className="flex flex-col space-y-4">
               <Link to="/" className="text-white hover:text-gray-300">Home</Link>
               <Link to="/about" className="text-white hover:text-gray-300">About Us</Link>
+              <Link to="/blogs" className="text-white hover:text-gray-300">Blogs</Link>
               <a href="#services" className="text-white hover:text-gray-300">Services</a>
             </div>
           </div>
