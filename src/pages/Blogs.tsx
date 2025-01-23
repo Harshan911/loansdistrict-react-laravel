@@ -1,7 +1,14 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BlogCard } from "@/components/BlogCard";
-import { Pagination } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { useState } from "react";
 
 const Blogs = () => {
@@ -11,24 +18,24 @@ const Blogs = () => {
   const blogs = [
     {
       id: 1,
-      title: "Mpox - Symptoms | Causes | Transmission | Updates",
-      date: "Aug 15, 2024",
-      image: "/placeholder.svg",
-      excerpt: "Learn about the latest updates and what steps should be taken...",
+      title: "Best Home Loan NBFC In Chennai",
+      date: "23-1-25",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      excerpt: "Learn about the best home loan options available in Chennai...",
     },
     {
       id: 2,
-      title: "How Shahkar Mehran Did Palliative Care On Time",
-      date: "Jun 25, 2024",
-      image: "/placeholder.svg",
-      excerpt: "A detailed case study on palliative care implementation...",
+      title: "Understanding Personal Loan Terms",
+      date: "23-1-24",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      excerpt: "A comprehensive guide to personal loan terms and conditions...",
     },
     {
       id: 3,
-      title: "What Makes Naruto Different From Formelander",
-      date: "Jun 24, 2024",
-      image: "/placeholder.svg",
-      excerpt: "An analysis of character development and impact...",
+      title: "Education Loan Application Guide",
+      date: "23-1-23",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      excerpt: "Step by step guide to applying for an education loan...",
     },
     // Add more blog posts as needed
   ];
@@ -46,7 +53,7 @@ const Blogs = () => {
       <Navigation />
       
       <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-12">Daily Blogs</h1>
+        <h1 className="text-4xl font-bold text-center mb-12">Our Blogs</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {paginatedBlogs.map((blog) => (
@@ -57,6 +64,13 @@ const Blogs = () => {
         <div className="mt-8 flex justify-center">
           <Pagination>
             <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                />
+              </PaginationItem>
+              
               {Array.from({ length: totalPages }).map((_, i) => (
                 <PaginationItem key={i}>
                   <PaginationLink
@@ -67,6 +81,13 @@ const Blogs = () => {
                   </PaginationLink>
                 </PaginationItem>
               ))}
+              
+              <PaginationItem>
+                <PaginationNext
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                />
+              </PaginationItem>
             </PaginationContent>
           </Pagination>
         </div>
