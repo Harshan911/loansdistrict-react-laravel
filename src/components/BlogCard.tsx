@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 interface BlogCardProps {
   title: string;
@@ -10,7 +9,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ title, date, image, excerpt }: BlogCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
       <div className="relative h-48">
         <img
           src={image}
@@ -28,9 +27,7 @@ export const BlogCard = ({ title, date, image, excerpt }: BlogCardProps) => {
         <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
           {excerpt}
         </p>
-        <Button variant="link" className="p-0 h-auto">
-          Read More
-        </Button>
+        <span className="text-primary hover:underline">Read More</span>
       </CardContent>
     </Card>
   );

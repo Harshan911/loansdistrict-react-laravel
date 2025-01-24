@@ -28,7 +28,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li><a href="/blogs" className="hover:text-gray-300">Latest Posts</a></li>
               <li><a href="/blogs" className="hover:text-gray-300">Featured Articles</a></li>
-              <li><a href="/blogs" className="hover:text-gray-300">News Updates</a></li>
+              <li><a href="/blogs" className="hover:text-gray-300">Loan Guides</a></li>
+              <li><a href="/blogs" className="hover:text-gray-300">Financial Tips</a></li>
             </ul>
           </div>
           
