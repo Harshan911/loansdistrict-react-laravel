@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const BlogPost = () => {
   const { id } = useParams();
   
-  // Mock blog data - in a real app this would come from an API
+  // Mock blog data - replace with API call when backend is integrated
   const blog = {
     id: Number(id),
     title: "Best Home Loan NBFC In Chennai",

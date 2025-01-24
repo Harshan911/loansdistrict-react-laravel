@@ -12,11 +12,21 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// This interface will be used when integrating with the backend
+interface BlogPost {
+  id: number;
+  title: string;
+  date: string;
+  image: string;
+  excerpt: string;
+  content: string;
+}
+
 const Blogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
   
-  // Mock blog data - in a real app this would come from an API
-  const blogs = [
+  // Mock blog data - replace with API call when backend is integrated
+  const blogs: BlogPost[] = [
     {
       id: 1,
       title: "Best Home Loan NBFC In Chennai",
@@ -104,8 +114,8 @@ const Blogs = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-12">Our Blogs</h1>
+      <main className="flex-grow container mx-auto px-4 py-8 bg-[#F2FCE2]">
+        <h1 className="text-4xl font-bold text-center mb-12 text-primary">Our Blogs</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {paginatedBlogs.map((blog) => (

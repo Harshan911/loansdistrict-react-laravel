@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold mb-4">Navigation</h3>
             <ul className="space-y-2">
@@ -20,16 +20,6 @@ export const Footer = () => {
               <li><a href="#" className="hover:text-gray-300">Home Loan</a></li>
               <li><a href="#" className="hover:text-gray-300">Education Loan</a></li>
               <li><a href="#" className="hover:text-gray-300">Personal Loan</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-bold mb-4">Blogs</h3>
-            <ul className="space-y-2">
-              <li><a href="/blogs" className="hover:text-gray-300">Latest Posts</a></li>
-              <li><a href="/blogs" className="hover:text-gray-300">Featured Articles</a></li>
-              <li><a href="/blogs" className="hover:text-gray-300">Loan Guides</a></li>
-              <li><a href="/blogs" className="hover:text-gray-300">Financial Tips</a></li>
             </ul>
           </div>
           

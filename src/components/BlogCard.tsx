@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ title, date, image, excerpt }: BlogCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full bg-white">
       <div className="relative h-48">
         <img
           src={image}
@@ -21,7 +21,7 @@ export const BlogCard = ({ title, date, image, excerpt }: BlogCardProps) => {
         </div>
       </div>
       <CardHeader className="pb-2">
-        <h3 className="font-semibold text-lg line-clamp-2">{title}</h3>
+        <h3 className="font-semibold text-lg line-clamp-2 text-primary">{title}</h3>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
