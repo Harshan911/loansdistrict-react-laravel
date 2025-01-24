@@ -43,15 +43,7 @@ const Blogs = () => {
       <Navigation />
       
       <main className="flex-grow container mx-auto px-4 py-8 bg-[#F2FCE2]">
-        <div className="flex justify-between items-center mb-12">
-          <h1 className="text-4xl font-bold text-primary">Our Blogs</h1>
-          <Link 
-            to="/blog/new" 
-            className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90"
-          >
-            Create New Blog
-          </Link>
-        </div>
+        <h1 className="text-4xl font-bold text-primary mb-12">Our Blogs</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {paginatedBlogs.map((blog) => (

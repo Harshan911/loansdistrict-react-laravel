@@ -5,10 +5,12 @@ import { LoanForm } from "@/components/LoanForm";
 import { About } from "@/components/About";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { LoginButton } from "@/components/LoginButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <LoginButton />
       <Navigation />
       <Hero />
       <Services />
