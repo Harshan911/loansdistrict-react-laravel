@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import AboutUs from "./pages/AboutUs";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
+import { BlogEditor } from "./components/BlogEditor";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/new" element={<BlogEditor />} />
           <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
