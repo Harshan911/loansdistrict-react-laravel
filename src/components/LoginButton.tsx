@@ -40,7 +40,7 @@ export const LoginButton = () => {
     <>
       <Button
         variant="outline"
-        className="absolute left-4 top-4"
+        className="absolute right-4 top-4"
         onClick={() => setIsOpen(true)}
       >
         Admin Login
