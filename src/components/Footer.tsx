@@ -1,6 +1,11 @@
-export const Footer = () => {
+interface FooterProps {
+  backgroundColor?: string;
+  textColor?: string;
+}
+
+export const Footer = ({ backgroundColor = 'bg-primary', textColor = 'text-white' }: FooterProps) => {
   return (
-    <footer className="bg-primary text-white py-12">
+    <footer className={`${backgroundColor} ${textColor} py-12`}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -25,7 +30,7 @@ export const Footer = () => {
           
           <div>
             <h3 className="font-bold mb-4">Contact Us</h3>
-            <p>loansdirect@gmail.com</p>
+            <p>loansdistrict@gmail.com</p>
           </div>
           
           <div>

@@ -12,12 +12,12 @@ const Index = () => {
     <div className="min-h-screen relative">
       <LoginButton />
       <Navigation />
-      <Hero />
+      <Hero backgroundColor="bg-white" textColor="text-gray-900" />
       <Services />
       <LoanForm />
-      <About />
+      <About backgroundColor="bg-gray-50" textColor="text-gray-900" />
       <FAQ />
-      <Footer />
+      <Footer backgroundColor="bg-primary" textColor="text-white" />
     </div>
   );
 };
